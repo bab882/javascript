@@ -1,0 +1,44 @@
+body {
+    min-height: 100vh;
+    font-family: "Josefin Sans", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    font-size: 3rem;
+    background-color: black;
+    color: #f7f7f7;
+   
+}
+
+#target {
+    display: flex;
+    margin-left: 1rem;
+    position: relative;
+    background-color: rgb(213, 94, 3);
+    color: black;
+    
+    border-radius: 10px;
+}
+
+#target::after {
+    content: "";
+    position: absolute;
+    height: 3rem;
+    width: 5px;
+    background: white;
+    top: 0;
+    transform: translateY(-4px);
+    right: -5px;
+    animation: anim 0.8s linear infinite;
+}
+
+@keyframes anim {
+    50% {
+        opacity: 0.1;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
